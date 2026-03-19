@@ -112,7 +112,7 @@ const bannerSlides = carList.map((name, index) => ({
             loremipsum@gmail.com
           </a> */}
           <a href="tel:0199178981" className="flex items-center hover:text-gray-200 transition-colors">
-            Servis Seluruh Malaysia
+            Servis Seluruh Semenanjung Malaysia
           </a>
         </div>
       </div>
