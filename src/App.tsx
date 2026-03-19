@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MessageCircle, MapPin, CheckCircle2, Wrench, Car, ShieldCheck, Building2, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
-//import dp from "./asset/dp.png"; // 👈 Gambar DP 
+import { Mail, Phone, MessageCircle, MapPin, CheckCircle2, Wrench, Car, ShieldCheck, Building2, Menu, X, ChevronLeft, ChevronRight, Facebook } from 'lucide-react';
+//import dp from "./asset/dp.png"; // 👈 Gambar DP
+
+const TiktokIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -301,6 +307,16 @@ const bannerSlides = carList.map((name, index) => ({
                   #OnlineBooking #ProtonTelukIntan #ProtonMalaysia
                 </p>
               </div>
+
+              <div className="flex gap-4 pt-4">
+                  <a href="https://www.facebook.com/muhammad.hafiz.980315/" className="w-10 h-10 bg-black text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors shadow-md">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.tiktok.com/@proton_hafizhaidher88" className="w-10 h-10 bg-black text-white rounded-xl flex items-center justify-center hover:bg-gray-800 transition-colors shadow-md">
+                    <TiktokIcon className="w-5 h-5" />
+                  </a>
+                </div>
+
             </div>
           </div>
         </div>
@@ -566,14 +582,25 @@ const bannerSlides = carList.map((name, index) => ({
       {/* Footer */}
       <footer className="bg-[#092b33] text-white pt-16 pb-8">
         <div className="container mx-auto px-4 max-w-6xl text-center">
-          <div className="flex flex-col items-center justify-center mb-8">
+          <div className="flex flex-col items-center justify-center mb-5">
             <img 
               src="/images/proton-hafiz[whitelogo].png" 
               alt="Proton Logo" 
-              className="h-12 lg:h-16 object-contain mb-2 brightness-0 invert"
+              className="h-12 lg:h-16 object-contain mb-1 brightness-0 invert"
               referrerPolicy="no-referrer"
             />
           </div>
+
+           <div className="flex gap-4 justify-center">
+              <a href="https://www.facebook.com/muhammad.hafiz.980315/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 text-white rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.tiktok.com/@proton_hafizhaidher88" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 text-white rounded-xl flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+                <TiktokIcon className="w-5 h-5" />
+              </a>
+            </div>
+
+            <div className="h-6"></div>  {/* tukar h-6 ke h-8/h-10 ikut nak lebih space */}
           
           {/* <h3 className="text-xl font-bold mb-6">Proton Hafiz - Pengedar Sah Proton</h3> */}
           
