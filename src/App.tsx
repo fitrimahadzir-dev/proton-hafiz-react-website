@@ -99,131 +99,108 @@ const bannerSlides = carList.map((name, index) => ({
   const galleryImages = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.avif`); // gambar testimoni
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800">
-      {/* Top Bar */}
-      <div className="bg-[#092b33] text-white py-1.5 px-4 md:px-8 text-xs font-medium flex justify-between items-center">
-        <div className="flex items-center">
-          <span className="hidden md:inline">Pengedar Sah Proton</span>
-          <span className="md:hidden">Servis Seluruh Semenanjung Malaysia</span>
-        </div>
-        <div className="flex items-center space-x-4">
-  {/* Facebook */}
-  <a 
-    href="https://www.facebook.com/muhammad.hafiz.980315/"
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="hover:text-gray-200 transition-colors"
-  >
-    <i className="fab fa-facebook-f text-sm"></i>
-  </a>
+  <div className="min-h-screen bg-white font-sans text-gray-800">
 
-  {/* TikTok */}
-  <a 
-    href="https://www.tiktok.com/@proton_hafizhaidher88"
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="hover:text-gray-200 transition-colors"
-  >
-    <i className="fab fa-tiktok text-sm"></i>
-  </a>
+   {/* Top Bar */}
+<div className="bg-[#092b33] h-5">
+  <div className="max-w-7xl mx-auto h-full"></div>
 </div>
+
+    {/* Header */}
+    <header className={`sticky top-0 z-50 bg-white transition-all duration-300 flex items-center ${isScrolled ? 'shadow-md py-2' : 'py-3 md:py-3'}`}>
+      <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+
+        {/* Left side: Logo */}
+        <div className="flex items-center">
+          <img 
+            src="/images/proton-hafiz[logo].png" 
+            alt="Proton Logo" 
+            className="h-8 lg:h-14 object-contain"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+
+        {/* Right side: CTAs + Contact Info */}
+        <div className="flex items-center space-x-3 md:space-x-6">
+          
+          {/* Desktop Contact Info */}
+          <div className="hidden lg:flex flex-col items-end mr-2">
+            <span className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mb-0.5">Hubungi Penasihat Jualan</span>
+            <a href="tel:0199178981" className="text-xl font-black text-gray-900 hover:text-red-600 transition-colors flex items-center">
+              <Phone className="w-5 h-5 mr-2 text-red-600" />
+              019-917 8981
+            </a>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center space-x-2 md:space-x-3">
+            <a 
+              href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20membuat%20tempahan%20pandu%20uji" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center justify-center bg-[#092b33] text-white px-5 py-2.5 rounded font-bold text-sm hover:bg-[#0c3f4b] transition-colors shadow-sm"
+            >
+              <Car className="w-4 h-4 mr-2" />
+              Test Drive
+            </a>
+            <a 
+              href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20bertanya%20tentang%20kereta%20Proton" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center justify-center bg-[#25D366] text-white px-6 py-2.5 rounded font-bold text-sm hover:bg-[#1ebd5a] transition-colors shadow-sm"
+            >
+              <i className="fa-brands fa-whatsapp text-xl mr-2"></i>
+              <span>WhatsApp Saya</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden text-gray-800 p-1 hover:bg-gray-100 rounded"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+        </div>
       </div>
 
-      {/* Header */}
-      <header className={`sticky top-0 z-50 bg-white transition-all duration-300 ${isScrolled ? 'shadow-md py-2' : 'py-3 md:py-4'}`}>
-        <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-          {/* Left side: Logo */}
-          <div className="flex items-center">
-            <div className="flex items-center justify-center">
-              <img 
-                src="/images/proton-hafiz[logo].png" 
-                alt="Proton Logo" 
-                className="h-8 lg:h-14 object-contain"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          </div>
-
-          {/* Right side: CTAs */}
-          <div className="flex items-center space-x-3 md:space-x-6">
-            
-            {/* Desktop Contact Info */}
-            <div className="hidden lg:flex flex-col items-end mr-2">
-              <span className="text-[11px] text-gray-500 font-bold uppercase tracking-wider mb-0.5">Hubungi Penasihat Jualan</span>
-              <a href="tel:0199178981" className="text-xl font-black text-gray-900 hover:text-red-600 transition-colors flex items-center">
-                <Phone className="w-5 h-5 mr-2 text-red-600" />
-                019-917 8981
-              </a>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex items-center space-x-2 md:space-x-3">
-              <a 
-                href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20membuat%20tempahan%20pandu%20uji" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hidden lg:flex items-center justify-center bg-[#092b33] text-white px-5 py-2.5 rounded font-bold text-sm hover:bg-[#0c3f4b] transition-colors shadow-sm"
-              >
-                <Car className="w-4 h-4 mr-2" />
-                Test Drive
-              </a>
-              <a 
-                href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20bertanya%20tentang%20kereta%20Proton" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hidden lg:flex items-center justify-center bg-[#25D366] text-white px-6 py-2.5 rounded font-bold text-sm hover:bg-[#1ebd5a] transition-colors shadow-sm"
-              >
-                <i className="fa-brands fa-whatsapp text-xl mr-2"></i>
-                <span>WhatsApp Saya</span>
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button 
-              className="lg:hidden text-gray-800 p-1 hover:bg-gray-100 rounded"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      {/* Mobile Nav */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-2 flex flex-col">
+          {navLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="text-sm font-bold text-gray-800 hover:text-red-600 hover:bg-gray-50 py-3 px-6 border-b border-gray-50"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              {link.name}
+            </a>
+          ))}
+          <div className="p-4 flex flex-col space-y-3 bg-gray-50">
+            <a 
+              href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20bertanya%20tentang%20kereta%20Proton" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center bg-[#25D366] text-white px-4 py-3 rounded font-bold text-sm w-full shadow-sm"
+            >
+              <i className="fa-brands fa-whatsapp text-xl mr-2"></i>
+              WhatsApp Saya
+            </a>
+            <a 
+              href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20membuat%20tempahan%20pandu%20uji" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center bg-black text-white px-4 py-3 rounded font-bold text-sm w-full shadow-sm"
+            >
+              <Car className="w-5 h-5 mr-2" />
+              Book Test Drive
+            </a>
           </div>
         </div>
-
-        {/* Mobile Nav */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 py-2 flex flex-col">
-            {navLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="text-sm font-bold text-gray-800 hover:text-red-600 hover:bg-gray-50 py-3 px-6 border-b border-gray-50"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-            <div className="p-4 flex flex-col space-y-3 bg-gray-50">
-              <a 
-                href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20bertanya%20tentang%20kereta%20Proton" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-[#25D366] text-white px-4 py-3 rounded font-bold text-sm w-full shadow-sm"
-              >
-                <i className="fa-brands fa-whatsapp text-xl mr-2"></i>
-                WhatsApp Saya
-              </a>
-              <a 
-                href="https://wa.me/60199178981?text=Hi%20Hafiz,%20saya%20dari%20website%20ingin%20membuat%20tempahan%20pandu%20uji" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center bg-black text-white px-4 py-3 rounded font-bold text-sm w-full shadow-sm"
-              >
-                <Car className="w-5 h-5 mr-2" />
-                Book Test Drive
-              </a>
-            </div>
-          </div>
-        )}
-      </header>
+      )}
+    </header>
 
       {/* Hero Section */}
       <section id="utama" className="w-full bg-white">
