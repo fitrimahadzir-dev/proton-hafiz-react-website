@@ -288,7 +288,7 @@ const bannerSlides = carList.map((name, index) => ({
             <div className="w-full md:w-5/12">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/dp.png"
+                  src="/images/dp.avif"
                   alt="Hafiz - Penasihat Jualan" 
                   className="w-full h-auto object-cover"
                 />
