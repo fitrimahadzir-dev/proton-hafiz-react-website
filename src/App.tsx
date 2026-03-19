@@ -107,14 +107,26 @@ const bannerSlides = carList.map((name, index) => ({
           <span className="md:hidden">Servis Seluruh Semenanjung Malaysia</span>
         </div>
         <div className="flex items-center space-x-4">
-          {/* <a href="mailto:loremipsum@gmail.com" className="hidden md:flex items-center hover:text-gray-200 transition-colors">
-            <Mail className="w-3.5 h-3.5 mr-1.5" />
-            loremipsum@gmail.com
-          </a> */}
-          <a href="tel:0199178981" className="flex items-center hover:text-gray-200 transition-colors">
-            Servis Seluruh Semenanjung Malaysia
-          </a>
-        </div>
+  {/* Facebook */}
+  <a 
+    href="https://www.facebook.com/muhammad.hafiz.980315/"
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="hover:text-gray-200 transition-colors"
+  >
+    <i className="fab fa-facebook-f text-sm"></i>
+  </a>
+
+  {/* TikTok */}
+  <a 
+    href="https://www.tiktok.com/@proton_hafizhaidher88"
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="hover:text-gray-200 transition-colors"
+  >
+    <i className="fab fa-tiktok text-sm"></i>
+  </a>
+</div>
       </div>
 
       {/* Header */}
