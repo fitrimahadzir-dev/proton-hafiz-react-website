@@ -31,7 +31,7 @@ export default function App() {
 
 const bannerSlides = carList.map((name, index) => ({
   id: index + 1,
-  image: `/images/banner-${name}.png`,
+  image: `/images/banner-${name}.avif`,
   alt: `Proton ${name.toUpperCase()} Banner`
 }));
 
@@ -96,7 +96,7 @@ const bannerSlides = carList.map((name, index) => ({
 
   //const galleryImages = Array(9).fill('https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=600&h=600');
 
-  const galleryImages = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.png`); // gambar testimoni
+  const galleryImages = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.avif`); // gambar testimoni
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
