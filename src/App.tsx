@@ -104,7 +104,7 @@ const bannerSlides = carList.map((name, index) => ({
       <div className="bg-[#092b33] text-white py-1.5 px-4 md:px-8 text-xs font-medium flex justify-between items-center">
         <div className="flex items-center">
           <span className="hidden md:inline">Pengedar Sah Proton</span>
-          <span className="md:hidden">Servis Seluruh Malaysia</span>
+          <span className="md:hidden">Servis Seluruh Semenanjung Malaysia</span>
         </div>
         <div className="flex items-center space-x-4">
           {/* <a href="mailto:loremipsum@gmail.com" className="hidden md:flex items-center hover:text-gray-200 transition-colors">
