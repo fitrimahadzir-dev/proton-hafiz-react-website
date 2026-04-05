@@ -611,7 +611,7 @@ const bannerSlides = carList.map((name, index) => ({
           <div className="border-t border-gray-800 pt-8 text-xs text-gray-500 space-y-2">
             <p>COPYRIGHT © 2026 - protonhafiz.com - All Right Reserved.</p>
             <p><strong className="text-gray-400">Disclaimer:</strong> Ini laman web Penasihat Jualan Proton yang sah dan berdaftar, bukannya laman web rasmi Proton.</p>
-            <p>Web Design By <a href="https://www.fitrimaahdzir.my" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white font-bold transition-colors">Fitri Mahadzir</a></p>
+            <p>Web Design By <a href="https://www.fitrimahadzir.my" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white font-bold transition-colors">Fitri Mahadzir</a></p>
           </div>
         </div>
       </footer>
